@@ -81,7 +81,7 @@ public class EntityLivingHandler {
            }
            if (evt.target.canAttackWithItem())
            {
-               if (!evt.target.func_85031_j(evt.entityPlayer))
+               if (!evt.target.hitByEntity(evt.entityPlayer))
                {
                    float f = ConfigHelper.Enderdamage;
                    int i = 0;
@@ -144,7 +144,7 @@ public class EntityLivingHandler {
                                evt.entityPlayer.triggerAchievement(AchievementList.overkill);
                            }
 
-                           evt.entityPlayer.func_130011_c(evt.target);
+                           evt.entityPlayer.setLastAttacker(evt.target);
 
                            if (evt.target instanceof EntityLivingBase)
                            {
