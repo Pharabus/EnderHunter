@@ -38,6 +38,7 @@ public class EntityLivingHandler {
         
         if(evt.recentlyHit && evt.source.getSourceOfDamage() instanceof EntityPlayer 
                 && evt.entity instanceof EntityEnderman 
+                && ((EntityPlayer)evt.source.getSourceOfDamage()).getCurrentEquippedItem() != null
                 && ((EntityPlayer)evt.source.getSourceOfDamage()).getCurrentEquippedItem().itemID == ConfigHelper.ShiftedItemAthameId)
         {
             int enchantLevel =EnchantmentHelper.getEnchantmentLevel(EnderHunter.enchantmentEnderHunter.effectId, ((EntityPlayer) evt.source.getSourceOfDamage()).getCurrentEquippedItem());
