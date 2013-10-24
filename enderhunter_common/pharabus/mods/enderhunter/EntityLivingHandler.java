@@ -59,7 +59,7 @@ public class EntityLivingHandler {
                 && evt.entityLiving.func_94060_bK() instanceof EntityPlayer)
         {
             EntityPlayer player = (EntityPlayer)evt.entityLiving.func_94060_bK();
-            if(player.getCurrentEquippedItem().itemID == ConfigHelper.ShiftedItemAthameId
+            if(player.getCurrentEquippedItem() != null && player.getCurrentEquippedItem().itemID == ConfigHelper.ShiftedItemAthameId
                     && EnchantmentHelper.getEnchantmentLevel(EnderHunter.enchantmentEnderHunter.effectId, player.getCurrentEquippedItem()) > 2)
             {
                 evt.setCanceled(true);
