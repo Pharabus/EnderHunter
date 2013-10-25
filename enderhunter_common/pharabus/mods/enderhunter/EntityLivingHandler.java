@@ -72,6 +72,7 @@ public class EntityLivingHandler {
     {
        if(evt.entity instanceof EntityPlayer 
         && (evt.target instanceof EntityEnderman || evt.target instanceof EntityDragon)
+        && evt.entityPlayer.getCurrentEquippedItem() != null
         && evt.entityPlayer.getCurrentEquippedItem().itemID == ConfigHelper.ShiftedItemAthameId)
         {
           

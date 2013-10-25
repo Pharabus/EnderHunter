@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.SideOnly;
 public class ItemAthame extends ItemSword {
 
     public ItemAthame(int id) {
-        super(id,EnumToolMaterial.GOLD);
+        super(id,EnderHunter.enderisedGold);
         setCreativeTab(CreativeTabs.tabCombat);
         setMaxStackSize(1);
         setUnlocalizedName(ConfigHelper.ItemAthameUnlocalisedname);
